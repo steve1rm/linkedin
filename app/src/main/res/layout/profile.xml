@@ -1,40 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-
-
-    <android.support.design.widget.CoordinatorLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <RelativeLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="60dp"
-        android:elevation="8dp">
-    
-        <FrameLayout
-            android:id="@+id/framelayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </FrameLayout>
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/photorace"
-            app:layout_anchor="@id/framelayout"
-            app:layout_anchorGravity="top|center"/>
-
-    </android.support.design.widget.CoordinatorLayout>
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:elevation="2dp">
 
 
+        <Button
+            android:id="@+id/btnMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingEnd="20dp"
+            android:background="@drawable/message_button"
+            android:textColor="@color/colorButton"
+            android:text="message"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_toRightOf="@id/btnMessage"
+            android:layout_toEndOf="@id/btnMessage"
+            android:background="@drawable/connect_button"
+            android:textColor="@android:color/white"
+            android:text="connect"/>
 
 
-</LinearLayout>
+    </RelativeLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civProfilePic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/photorace"
+        android:translationZ="1dp"
+        app:layout_anchor="@id/frameLayout"
+        app:layout_anchorGravity="top|center"
+        />
+
+</android.support.design.widget.CoordinatorLayout>
 
 
     <!--    <TextView
