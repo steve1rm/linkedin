@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:height="100dp">
+    <item android:height="240dp">
         <bitmap
-            android:src="@drawable/concert"
-            android:gravity="top"/>
+            android:src="@drawable/tokyo" />
     </item>
 
 </layer-list>

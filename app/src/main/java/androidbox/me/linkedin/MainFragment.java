@@ -1,11 +1,14 @@
 package androidbox.me.linkedin;
 
 
+import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 
 /**
@@ -20,10 +23,17 @@ public class MainFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false);
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
+
+        CircleImageView circleImageView = (CircleImageView)view.findViewById(R.id.civProfilePic);
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            circleImageView.setTranslationZ(10);
+        }
+        circleImageView.invalidate();
+
+        return view;
     }
 
 }
