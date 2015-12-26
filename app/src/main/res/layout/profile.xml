@@ -61,11 +61,10 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/tvEducation"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="16dp"
             android:text="Greater San Diego Area . 500"
             android:textSize="16sp"
             android:fontFamily="sans-serif-light"/>
-
 
         <Space
             android:id="@+id/spaceHolder"
@@ -123,35 +122,12 @@
             android:fontFamily="sans-serif-medium"/>
     </RelativeLayout>
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/civProfilePic"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:src="@drawable/photorace"
-        app:civ_border_color="#ffffff"
-        app:civ_border_width="3dp"
-        app:layout_anchor="@id/frameLayout"
-        app:layout_anchorGravity="top|center" />
-
-    <TextView
-        android:id="@+id/tvLevel"
+    <include
+        android:id="@+id/photoHeader"
+        layout="@layout/photo_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="2nd"
-        android:textSize="14sp"
-        android:fontFamily="sans-serif-condensed"
-        app:layout_anchor="@id/civProfilePic"
-        app:layout_anchorGravity="bottom|end" />
+        app:layout_anchor="@id/frameLayout"
+        app:layout_anchorGravity="top|center"/>
 
 </android.support.design.widget.CoordinatorLayout>
-
-
-    <!--    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Marian Hart"
-        android:textSize="32sp"
-        android:fontFamily="sans-serif-light"
-        android:textColor="@android:color/black"
-        android:layout_gravity="center"/>-->

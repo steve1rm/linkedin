@@ -30,9 +30,14 @@ public class MainFragment extends Fragment {
         TextView tvLevel = (TextView)view.findViewById(R.id.tvLevel);
         CircleImageView circleImageView = (CircleImageView)view.findViewById(R.id.civProfilePic);
 
+        View photoHeader = view.findViewById(R.id.photoHeader);
+
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            circleImageView.setTranslationZ(4);
-            circleImageView.invalidate();
+            photoHeader.setTranslationZ(6);
+            photoHeader.invalidate();
+
+  //          circleImageView.setTranslationZ(4);
+    //        circleImageView.invalidate();
 
    //         tvLevel.setTranslationZ(4);
   //          tvLevel.bringToFront();
