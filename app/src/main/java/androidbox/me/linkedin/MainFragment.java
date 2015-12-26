@@ -7,6 +7,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -27,11 +28,16 @@ public class MainFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
+        TextView tvLevel = (TextView)view.findViewById(R.id.tvLevel);
         CircleImageView circleImageView = (CircleImageView)view.findViewById(R.id.civProfilePic);
+
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             circleImageView.setTranslationZ(10);
+            circleImageView.invalidate();
+
+            tvLevel.setTranslationZ(10);
+            tvLevel.invalidate();
         }
-        circleImageView.invalidate();
 
         return view;
     }
