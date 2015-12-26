@@ -22,7 +22,6 @@ public class MainFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
@@ -32,12 +31,20 @@ public class MainFragment extends Fragment {
         CircleImageView circleImageView = (CircleImageView)view.findViewById(R.id.civProfilePic);
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            circleImageView.setTranslationZ(10);
+            circleImageView.setTranslationZ(4);
             circleImageView.invalidate();
 
-            tvLevel.setTranslationZ(10);
-            tvLevel.invalidate();
+   //         tvLevel.setTranslationZ(4);
+  //          tvLevel.bringToFront();
+    //        tvLevel.requestLayout();
+    //        tvLevel.invalidate();
         }
+
+/*
+        tvLevel.bringToFront();
+        tvLevel.requestLayout();
+        tvLevel.invalidate();
+*/
 
         return view;
     }

@@ -142,7 +142,7 @@
         android:textSize="14sp"
         android:fontFamily="sans-serif-condensed"
         app:layout_anchor="@id/civProfilePic"
-        app:layout_anchorGravity="bottom|end"/>
+        app:layout_anchorGravity="bottom|end" />
 
 </android.support.design.widget.CoordinatorLayout>
 
