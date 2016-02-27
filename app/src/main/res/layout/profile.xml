@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <RelativeLayout
-        android:id="@+id/frameLayout"
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="16dp"
@@ -127,7 +127,6 @@
         layout="@layout/photo_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_anchor="@id/frameLayout"
+        app:layout_anchor="@id/relativeLayout"
         app:layout_anchorGravity="top|center"/>
-
 </android.support.design.widget.CoordinatorLayout>

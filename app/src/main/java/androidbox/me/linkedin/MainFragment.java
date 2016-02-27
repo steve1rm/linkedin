@@ -25,10 +25,11 @@ public class MainFragment extends Fragment {
         View photoHeader = view.findViewById(R.id.photoHeader);
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            /* For devices equal or higher than lollipop set the translation above everything else */
             photoHeader.setTranslationZ(6);
+            /* Redraw the view to show the translation */
             photoHeader.invalidate();
         }
-
 
         return view;
     }
